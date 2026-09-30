@@ -14,7 +14,8 @@
     body {
       margin: 0;
       min-height: 100vh;
-      background: #0d0d0f;
+      background:
+        radial-gradient(circle at top, #19191f 0%, #0d0d0f 45%);
       color: white;
       font-family: Arial, sans-serif;
       display: flex;
@@ -29,17 +30,17 @@
     }
 
     .logo {
-      font-size: 38px;
+      font-size: 40px;
       font-weight: 900;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
       margin-bottom: 5px;
     }
 
     .studio {
       color: #8d8d96;
-      letter-spacing: 8px;
+      letter-spacing: 9px;
       font-size: 13px;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
     }
 
     .title {
@@ -49,26 +50,44 @@
     }
 
     .game {
+      position: relative;
+      overflow: hidden;
       background: #18181c;
       border: 1px solid #29292f;
-      border-radius: 22px;
-      padding: 25px;
-      margin-bottom: 20px;
-      transition: 0.2s;
+      border-radius: 25px;
+      padding: 28px 24px 24px;
+      margin-bottom: 24px;
+      transition: 0.25s;
     }
 
     .game:hover {
-      transform: translateY(-3px);
-      border-color: #555;
+      transform: translateY(-4px);
+    }
+
+    .kio {
+      box-shadow: 0 10px 40px rgba(36, 120, 65, 0.10);
+    }
+
+    .perfect {
+      box-shadow: 0 10px 40px rgba(0, 100, 255, 0.12);
+    }
+
+    .game-icon {
+      width: 115px;
+      height: 115px;
+      object-fit: cover;
+      border-radius: 25px;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
     }
 
     .game h2 {
       margin: 0 0 8px;
-      font-size: 23px;
+      font-size: 25px;
     }
 
     .game p {
-      margin: 0 0 20px;
+      margin: 0 0 22px;
       color: #9999a3;
       font-size: 14px;
     }
@@ -78,9 +97,15 @@
       text-decoration: none;
       background: white;
       color: black;
-      padding: 14px;
-      border-radius: 12px;
+      padding: 15px;
+      border-radius: 13px;
       font-weight: bold;
+      font-size: 15px;
+      transition: 0.2s;
+    }
+
+    .play-button:active {
+      transform: scale(0.98);
     }
 
     footer {
@@ -100,25 +125,51 @@
 
     <div class="title">Independent Games</div>
 
-    <div class="game">
+    <!-- KIO'S WILD RUN -->
+
+    <div class="game kio">
+
+      <img
+        class="game-icon"
+        src="unnamed (1).png"
+        alt="Kio's Wild Run">
+
       <h2>Kio's Wild Run</h2>
+
       <p>Fast-paced endless runner.</p>
 
-      <a class="play-button"
-         href="https://play.google.com/store/apps/details?id=com.Kioswildrun">
+      <a
+        class="play-button"
+        href="https://play.google.com/store/apps/details?id=com.Kioswildrun"
+        target="_blank">
         Get it on Google Play
       </a>
+
     </div>
 
-    <div class="game">
+
+    <!-- PERFECT DROP -->
+
+    <div class="game perfect">
+
+      <img
+        class="game-icon"
+        src="unnamed.png"
+        alt="Perfect Drop">
+
       <h2>Perfect Drop</h2>
+
       <p>Simple. Addictive. One more try.</p>
 
-      <a class="play-button"
-         href="https://play.google.com/store/apps/details?id=com.kusrastudio.perfectdrop">
+      <a
+        class="play-button"
+        href="https://play.google.com/store/apps/details?id=com.kusrastudio.perfectdrop"
+        target="_blank">
         Get it on Google Play
       </a>
+
     </div>
+
 
     <footer>
       © 2026 Kusra Studio
